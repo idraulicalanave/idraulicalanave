@@ -1,136 +1,159 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Idraulica La Nave</title>
-    <link rel="stylesheet" href="css/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Idraulica La Nave</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
-
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="img/logo_transparent_background.PNG" alt="Logo Idraulica La Nave">
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Chi Siamo</a></li>
-                <li><a href="#services">Servizi</a></li>
-                <li><a href="#contact">Contatti</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
+  <div id="fullscreen-logo">
+    <img src="img/logo_transparent_background.PNG" alt="Logo Idraulica La Nave">
+  </div>
 
-    <section id="home">
-        <h1>Esperti in soluzioni idrauliche dal 1986</h1>
-        <p>Affidabilità, qualità e professionalità a servizio della tua casa</p>
+  <nav class="navbar is-fixed-top is-spaced has-text-link-light has-background-link-light" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#home">
+          <img src="img/logo_transparent_background.PNG" alt="Logo Idraulica La Nave">
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navbarBasic" class="navbar-menu is-active">
+        <div class="navbar-start" style="margin: 0 auto;">
+          <a class="navbar-item" href="#home">Home</a>
+          <a class="navbar-item" href="#about">Chi Siamo</a>
+          <a class="navbar-item" href="#services">Servizi</a>
+          <a class="navbar-item" href="#contact">Contatti</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <section id="home" class="hero is-fullheight">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title">Esperti in soluzioni idrauliche dal 1986</h1>
+        <p class="subtitle">Affidabilità, qualità e professionalità a servizio della tua casa</p>
+      </div>
+    </div>
+
+    <div class="container">
         <div class="carousel">
-            <div class="carousel-images">
-                <img src="img/img1.jpg" alt="Immagine 1">
-                <img src="img/img2.jpg" alt="Immagine 2">
-                <img src="img/img3.jpg" alt="Immagine 3">
-                <img src="img/img4.jpg" alt="Immagine 4">
-                <img src="img/img5.jpg" alt="Immagine 5">
-                <img src="img/img6.jpg" alt="Immagine 6">
-                <img src="img/img7.jpg" alt="Immagine 7">
-                <img src="img/img8.jpg" alt="Immagine 8">
-                <img src="img/img9.jpg" alt="Immagine 9">
-                <img src="img/img10.jpg" alt="Immagine 10">
-                <img src="img/img11.jpg" alt="Immagine 11">
-                <img src="img/img12.jpg" alt="Immagine 12">
+          <div class="carousel-images">
+            <div class="carousel-track">
+              <img src="img/img1.jpg" alt="Immagine 1">
+              <img src="img/img2.jpg" alt="Immagine 2">
+              <img src="img/img3.jpg" alt="Immagine 3">
+              <img src="img/img4.jpg" alt="Immagine 4">
+              <img src="img/img5.jpg" alt="Immagine 5">
+              <img src="img/img6.jpg" alt="Immagine 6">
+              <img src="img/img7.jpg" alt="Immagine 7">
+              <img src="img/img8.jpg" alt="Immagine 8">
+              <img src="img/img9.jpg" alt="Immagine 9">
+              <img src="img/img10.jpg" alt="Immagine 10">
+              <img src="img/img11.jpg" alt="Immagine 11">
+              <img src="img/img12.jpg" alt="Immagine 12">
             </div>
+          </div>
         </div>
-    </section>
-
-    <section id="about">
-        <h1>Chi Siamo</h1>
-        <p>Idraulica La Nave è una ditta a conduzione familiare, attiva dal 1989, con sede nel quartiere fiorentino di Gavinana. Da oltre trent'anni, l'azienda offre servizi idraulici di alta qualità nelle zone di Firenze e nei comuni limitrofi, diventando un punto di riferimento per privati e aziende. Specializzata in riparazioni idrauliche, sostituzione di caldaie, installazione di impianti a gas e impianti di riscaldamento e condizionamento, Idraulica La Nave si distingue per la professionalità, l'affidabilità e l'attenzione al cliente, garantendo interventi rapidi e soluzioni su misura per ogni esigenza.</p>
-        <div class="img-cont">
-            <img src="img/us.jpg" alt="Chi Siamo" class="zoomable-img">
+      </div>
+  </section>
+  
+  <section id="about" class="section">
+    <div class="container">
+      <h1 class="title has-text-centered">Chi Siamo</h1>
+      <div class="about-box">
+        <div class="columns is-vcentered">
+          <div class="column is-half">
+            <figure class="image">
+              <img src="img/us.jpg" alt="Chi Siamo" class="zoomable-img">
+            </figure>
+          </div>
+          <div class="column is-half">
+            <p>
+              Idraulica La Nave è una ditta a conduzione familiare, attiva dal 1989, con sede nel quartiere fiorentino di Gavinana. Da oltre trent'anni, l'azienda offre servizi idraulici di alta qualità nelle zone di Firenze e nei comuni limitrofi, diventando un punto di riferimento per privati e aziende. Specializzata in riparazioni idrauliche, sostituzione di caldaie, installazione di impianti a gas e impianti di riscaldamento e condizionamento, Idraulica La Nave si distingue per la professionalità, l'affidabilità e l'attenzione al cliente.
+            </p>
+          </div>
         </div>
-    </section>
-
-    <section class="services-with-border">
-        <div id="l-margin">
-        </div>
-        <section id="services">
-            <h1>I Nostri Servizi</h1>
-            <div class="service">
-                <h3>Riparazioni idrauliche</h3>
-                <p>Offriamo un servizio completo di riparazioni idrauliche, coprendo qualsiasi problema legato a tubature, perdite d'acqua, rubinetti difettosi e sanitari danneggiati.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="services" class="section">
+    <div class="container">
+      <h1 class="title has-text-centered">I Nostri Servizi</h1>
+      <div class="columns is-multiline">
+        <div class="column is-half-tablet is-one-quarter-desktop">
+          <div class="card">
+            <div class="card-content">
+              <p class="title is-4">Riparazioni idrauliche</p>
+              <p class="content">Servizio completo per riparazioni, perdite d'acqua, rubinetti difettosi e sanitari danneggiati.</p>
             </div>
-            <div class="service">
-                <h3>Sostituzione caldaie</h3>
-                <p>Forniamo un servizio di sostituzione caldaie, assicurando il passaggio a modelli più moderni e efficienti. Che si tratti di una caldaia tradizionale o di una più avanzata, i nostri esperti si occupano di ogni fase: dalla rimozione del vecchio impianto, all'installazione e collaudo del nuovo, migliorando l’efficienza energetica della vostra casa e riducendo i consumi.</p>
-            </div>
-            <div class="service">
-                <h3>Impianti gas</h3>
-                <p>Ci occupiamo dell'installazione, manutenzione e riparazione di impianti a gas, garantendo il massimo rispetto delle normative vigenti in termini di sicurezza. Il nostro servizio è ideale per chi desidera impianti sicuri, efficienti e controllati da tecnici qualificati, sia per uso domestico che commerciale.</p>
-            </div>
-            <div class="service">
-                <h3>Impianti di riscaldamento e condizionamento</h3>
-                <p>Progettiamo e installiamo impianti di riscaldamento e condizionamento adatti a ogni tipo di ambiente. Dalla progettazione dell'impianto fino all’installazione e alla manutenzione, assicuriamo soluzioni efficienti, eco-sostenibili e personalizzate in base alle esigenze specifiche dei nostri clienti.</p>
-            </div>
-        </section>
-        <div id="r-margin">
+          </div>
         </div>
-    </section>
-    
-
-    <section id="contact">
-        <h1>Contattaci</h1>
-        <div class="recapiti">
-            <h3>Recapiti:</h3>
-            <div class="telefono">
-                <h4>Telefono:</h4>
-                <p> Recapito fisso: 055 6531427</p>
+        <div class="column is-half-tablet is-one-quarter-desktop">
+          <div class="card">
+            <div class="card-content">
+              <p class="title is-4">Sostituzione caldaie</p>
+              <p class="content">Dalla rimozione al collaudo, passaggio a modelli moderni ed efficienti per migliorare l’efficienza energetica.</p>
             </div>
-            <div class="mail">
-                <h4>Mail:</h4>
-                <p>idraulicalanave@virgilio.it <br>
-                   idraulicalanave@pecsicura.it
-                </p>
+          </div>
+        </div>
+        <div class="column is-half-tablet is-one-quarter-desktop">
+          <div class="card">
+            <div class="card-content">
+              <p class="title is-4">Impianti gas</p>
+              <p class="content">Installazione, manutenzione e riparazione di impianti a gas conformi alle normative di sicurezza.</p>
             </div>
+          </div>
         </div>
-        <div class="orari">
-            <h3>Orari:</h3>
-            <p>Lun - Ven: 8:00 - 18:00;                 Sab: Chiuso;                 Dom: Chiuso;</p>
+        <div class="column is-half-tablet is-one-quarter-desktop">
+          <div class="card">
+            <div class="card-content">
+              <p class="title is-4">Riscaldamento e condizionamento</p>
+              <p class="content">Progettazione e installazione di impianti efficienti ed eco-sostenibili per ogni ambiente.</p>
+            </div>
+          </div>
         </div>
-        <div class="dove-siamo">
-            <h3>Dove siamo:</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.5246429867316!2d11.285832875347316!3d43.76196714539052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a53864d34a08b%3A0x382a2320d0ed05ac!2sIdraulica%20La%20Nave!5e0!3m2!1sit!2sit!4v1726669123676!5m2!1sit!2sit" 
-            width="600" 
-            height="450" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+      </div>
+    </div>
+  </section>
+  
+  <section id="contact" class="section">
+    <div class="container">
+      <h1 class="title has-text-centered">Contattaci</h1>
+      <div class="columns">
+        <div class="column">
+          <h3 class="subtitle">Recapiti:</h3>
+          <p><strong>Telefono:</strong> 055 6531427</p>
+          <p><strong>Mail:<br></strong>- idraulicalanave@virgilio.it<br>- idraulicalanave@pecsicura.it</p>
         </div>
-        <!--
-        <div class="form">
-            <h3>Invia una mail:</h3>
-            <form>
-                <input type="text"  name="name" placeholder="Nome" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <textarea name="message" placeholder="Messaggio" required></textarea>
-                <button type="submit">Invia</button>
-            </form>
-            <div id="form-message"></div>
+        <div class="column">
+          <h3 class="subtitle">Orari:</h3>
+          <p><strong>Lun - Ven:</strong> 8:00 - 18:00<br><strong>Sab -Dom:</strong> Chiuso</p>
         </div>
-    </section>-->
-
-    <footer>
-        <p>© Sede Via Largo Pietro Paolo Boscoli, 14, 50126, FIRENZE; Tel: +39 055 6531427; E-mail: idraulicalanave@virgilio.it</p>
-    </footer>
-
-    <script src="js/main.js"></script>
+      </div>
+      <div class="box">
+        <h3 class="subtitle">Dove siamo:</h3>
+        <div class="video-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.5246429867316!2d11.285832875347316!3d43.76196714539052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a53864d34a08b%3A0x382a2320d0ed05ac!2sIdraulica%20La%20Nave!5e0!3m2!1sit!2sit!4v1726669123676!5m2!1sit!2sit" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="footer has-background-dark has-text-white-ter">
+    <div class="content has-text-centered">
+      <p>© 2025 Idraulica La Nave. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+  
+  <script src="js/main.js"></script>
 </body>
 </html>
-
