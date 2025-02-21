@@ -1,70 +1,62 @@
-window.addEventListener('scroll', () => {
-    const nav = document.querySelector('.nav-links');
-    const logoHeight = document.querySelector('.logo').offsetHeight;
+document.addEventListener('DOMContentLoaded', () => {
+    const navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    if (navbarBurgers.length > 0) {
+      navbarBurgers.forEach(el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const targetMenu = document.getElementById(target);
+          el.classList.toggle('is-active');
+          targetMenu.classList.toggle('is-active');
+        });
+      });
+    }
 
-    if (window.scrollY > logoHeight) {
-        nav.classList.add('sticky-nav');
-    } else {
-        nav.classList.remove('sticky-nav');
+    const fullscreenLogo = document.getElementById('fullscreen-logo');
+      document.addEventListener('click', () => {
+        fullscreenLogo.classList.add('hidden');
+      }, { once: true });
+    
+    const navbarLinks = document.querySelectorAll('.navbar-item');
+    navbarLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetEl = document.getElementById(targetId);
+        if (targetEl) {
+          targetEl.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+    
+    let index = 0;
+    function getVisibleImages() {
+      if (window.innerWidth <= 768) return 1;
+      if (window.innerWidth <= 1024) return 2;
+      return 3;
+    }
+
+    function moveSlide(direction) {
+      const track = document.querySelector('.carousel-track');
+      const totalImages = document.querySelectorAll('.carousel-track img').length;
+      const visibleImages = getVisibleImages();
+      const maxIndex = totalImages - visibleImages;
+      
+      index += direction;
+      if (index < 0) index = maxIndex;
+      if (index > maxIndex) index = 0;
+      
+      track.style.transform = `translateX(${-index * (100 / visibleImages)}%)`;
+    }
+
+    setInterval(() => moveSlide(1), 4000);
+
+    const zoomableImg = document.querySelector('.zoomable-img');
+    if (zoomableImg) {
+      zoomableImg.addEventListener('click', () => {
+        zoomableImg.classList.toggle('zoomed');
+      });
     }
 });
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    const nav = document.querySelector('.nav-links');
-    const navHeight = nav.offsetHeight;
-
-    document.querySelectorAll('.nav-links a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-
-            const scrollToPosition = targetElement.offsetTop - (nav.classList.contains('sticky-nav') ? navHeight : 0);
-
-            window.scrollTo({
-                top: scrollToPosition,
-                behavior: 'smooth'
-            });
-        });
-    });
-});
-
-
-
-
-
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
-
-
-
-
-
-
-const images = document.querySelectorAll('.carousel-images img');
-let currentIndex = 0;
-
-function showNextImage() {
-    images[currentIndex].classList.remove('active');
-    
-    currentIndex = (currentIndex + 1) % images.length;
-    
-    images[currentIndex].classList.add('active');
-}
-
-setInterval(showNextImage, 4000);
-
-
-
-
-const image = document.querySelector('.zoomable-img');
-
-image.addEventListener('click', () => {
-    image.classList.toggle('zoomed'); 
-});
+  
